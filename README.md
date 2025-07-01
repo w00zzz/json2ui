@@ -1,33 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Json2UI
 
-## Getting Started
+A powerful JSON to UI generator that transforms JSON schemas into beautiful, functional user interfaces. Built with Next.js, TypeScript, and Prisma, Json2UI allows you to quickly generate UIs from JSON definitions with minimal effort.
 
-First, run the development server:
+## 🚀 Features
+
+- **JSON to UI Generation**: Transform JSON schemas into fully functional UIs
+- **Customizable Components**: Extensive library of pre-built UI components
+- **Real-time Preview**: See changes as you edit your JSON schema
+- **Modern Stack**: Next.js 14 with App Router and TypeScript
+- **Responsive Design**: Works seamlessly across all device sizes
+- **User Authentication**: Secure access control for your projects
+
+## 🛠 Tech Stack
+
+- **Frontend**: Next.js 14, React 19, TypeScript, Tailwind CSS
+- **Backend**: Next.js API Routes
+- **Database**: PostgreSQL with Prisma ORM
+- **Authentication**: Custom JWT-based authentication
+- **Testing**: Vitest, React Testing Library
+- **Styling**: Tailwind CSS
+
+## 📦 Prerequisites
+
+- Node.js 18.0.0 or later
+- PostgreSQL database
+- npm or yarn
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/json2ui.git
+cd json2ui
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Set up environment variables
+
+Create a `.env` file in the root directory:
+
+```env
+DATABASE_URL="postgresql://user:password@localhost:5432/retool_clone"
+JWT_SECRET=your_jwt_secret_here
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET=your_nextauth_secret_here
+```
+
+### 4. Set up the database
+
+Run database migrations:
+
+```bash
+npx prisma migrate dev --name init
+```
+
+### 5. Start the development server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧪 Running Tests
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm test
+# or
+yarn test
+```
 
-## Learn More
+## 🏗 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+json2ui/
+├── app/                  # Next.js app directory
+├── backend/             # Backend controllers and utilities
+│   ├── controllers/     # Request handlers
+│   ├── middlewares/     # Express middlewares
+│   ├── services/        # Business logic
+│   └── utils/           # Utility functions
+├── db/                  # Database configuration
+│   └── prisma/          # Prisma schema and migrations
+├── public/              # Static files
+├── tests/               # Test files
+└── .env.example         # Example environment variables
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📬 Contact
+
+Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - your.email@example.com
+
+Project Link: [https://github.com/yourusername/json2ui](https://github.com/yourusername/json2ui)
 
 ## Deploy on Vercel
 
