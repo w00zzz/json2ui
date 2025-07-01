@@ -48,7 +48,7 @@ yarn install
 Create a `.env` file in the root directory:
 
 ```env
-DATABASE_URL="postgresql://user:password@localhost:5432/retool_clone"
+DATABASE_URL="postgresql://user:password@localhost:5432/json2ui"
 JWT_SECRET=your_jwt_secret_here
 NEXTAUTH_URL="http://localhost:3000"
 NEXTAUTH_SECRET=your_nextauth_secret_here
@@ -107,9 +107,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📬 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - your.email@example.com
+w00zzz - [@w00zzz](https://twitter.com/w00zzz) - w00zzz@proton.me
 
-Project Link: [https://github.com/yourusername/json2ui](https://github.com/yourusername/json2ui)
+Project Link: [https://github.com/w00zzz/json2ui](https://github.com/w00zzz/json2ui)
 
 ## Deploy on Vercel
 
