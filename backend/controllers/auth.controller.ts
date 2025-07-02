@@ -10,11 +10,12 @@ export async function createUserController(
   password: string,
   role: Role = Role.USER
 ) {
+  const hashed = await hashPassword(password);
   const user = await prisma.user.create({
     data: {
       email,
       username,
-      password,
+      password: hashed,
       role,
     },
   });
@@ -64,6 +65,7 @@ export async function changePasswordController(userId: string, currentPassword: 
   }
 
   const passwordMatch = await comparePassword(currentPassword, user.password);
+  console.log(currentPassword, user.password);
   if (!passwordMatch) {
     throw new Error('Incorrect current password');
   }

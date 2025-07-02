@@ -18,12 +18,15 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
       "@backend/*": ["./backend/*"],
-      "@db/*": ["./db/*"]
+      "@db/*": ["./db/*"],
+      "@/db/prisma": ["./db/generated/prisma"],
+      "@/backend/utils/*": ["./backend/utils/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "types/**/*.d.ts"],
   "exclude": ["node_modules"]
 }

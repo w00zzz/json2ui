@@ -1,0 +1,77 @@
+{
+  "info": {
+    "name": "API Usuarios",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Colección API Usuarios para importar en Postman",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear Usuario",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"usuario@example.com\",\"username\":\"usuario\",\"password\":\"123456\"}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users"]
+        }
+      }
+    },
+    {
+      "name": "Listar Usuarios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users"]
+        }
+      }
+    },
+    {
+      "name": "Obtener Usuario por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users/123",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "123"]
+        }
+      }
+    },
+    {
+      "name": "Cambiar Contraseña",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"oldPassword\":\"123456\",\"newPassword\":\"654321\"}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/change-password",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "change-password"]
+        }
+      }
+    }
+  ]
+}
+

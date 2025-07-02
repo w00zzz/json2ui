@@ -1,0 +1,67 @@
+{
+  "info": {
+    "name": "NextAuth Credentials Auth Test",
+    "_postman_id": "5b7a8d8e-1234-4f56-89ab-cdef12345678",
+    "description": "Colección para probar login con CredentialsProvider en NextAuth",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get CSRF Token",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/auth/csrf",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api","auth","csrf"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login with Credentials",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "csrfToken",
+              "value": "",
+              "type": "text",
+              "description": "Reemplaza con el valor obtenido del primer request"
+            },
+            {
+              "key": "email",
+              "value": "tuemail@dominio.com",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "tu_password",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/callback/credentials",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api","auth","callback","credentials"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
+
